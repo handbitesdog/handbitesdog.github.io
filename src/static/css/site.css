@@ -1,5 +1,11 @@
 /* site.css */
 
+:root {
+    --color-ultrasuede-st-white: #dfdbd4;
+    --color-ultrasuede-st-zodiac: #39366f;
+    --color-ultrasuede-st-lemon: #e0ae2d;
+}
+
 /* Footbag list */
 .footbag-row {
     border: var(--border-thin-width) solid var(--color-border);
@@ -60,6 +66,15 @@
     flex: 1;
 }
 
+.fabric-swatch {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--border-radius);
+    border: var(--border-thin-width) solid var(--color-border);
+    vertical-align: middle;
+}
+
 .footbag-detail-fill h3,
 .footbag-detail-info h3 {
     margin-bottom: var(--space-1);
@@ -102,6 +117,7 @@
     display: none;
 }
 
+.footbag-col-fabric,
 .footbag-col-fill {
     flex: 1;
 }

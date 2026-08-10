@@ -7,6 +7,7 @@
 <div class="footbag-row-body flex items-center gap-2">
 <span class="footbag-col-name text-xs text-muted uppercase">Name</span>
 <span class="footbag-row-summary-meta flex items-center gap-2">
+<span class="footbag-col-fabric text-xs text-muted uppercase">Fabric</span>
 <span class="footbag-col-fill text-xs text-muted uppercase">Fill</span>
 <span class="footbag-col-weight text-xs text-muted uppercase">Weight</span>
 <span class="footbag-col-level text-xs text-muted uppercase">Level</span>
@@ -23,6 +24,7 @@
 <div class="footbag-row-heading flex items-center gap-2">
 <span class="footbag-col-name font-bold">{{.name}}</span>
 <span class="footbag-row-summary-meta flex items-center gap-2">
+<span class="footbag-col-fabric flex flex-col gap-1">{{range .fabric}}{{$fabricName := .fabric_name}}{{range .colors}}<span class="flex items-center gap-1">{{<FabricSwatch fabric_name=$fabricName color=./>}} {{.}}</span>{{end}}{{end}}</span>
 <span class="footbag-col-fill flex flex-col gap-1">{{range .fill}}<span class="flex items-center gap-1">{{<MaterialIcon category=.category/>}} {{.category}}: {{.weight_g}}g</span>{{end}}</span>
 <span class="footbag-col-weight">{{.total_weight_g}}g</span>
 <span class="footbag-col-level">{{.fill_level_pct}}%</span>
@@ -33,6 +35,13 @@
 <div class="footbag-detail-fill flex flex-col gap-1">
 <h3>Design</h3>
 <div><span class="text-muted">Color pattern:</span> {{.color_pattern}}</div>
+{{range .fabric}}
+{{$fabricName := .fabric_name}}
+<div class="footbag-fabric-type text-muted">{{$fabricName}}</div>
+{{range .colors}}
+<div class="flex items-center gap-1">{{<FabricSwatch fabric_name=$fabricName color=./>}} <span>{{.}}</span></div>
+{{end}}
+{{end}}
 <h3>Fill</h3>
 <div><span class="text-muted">Level:</span> {{.fill_level_pct}}%</div>
 <div><span class="text-muted">Total weight:</span> {{.total_weight_g}}g</div>
