@@ -103,9 +103,3 @@
 .footbag-col-level {
     width: 100px;
 }
-
-.footbag-col-date {
-    width: 90px;
-    text-align: right;
-    color: var(--color-muted);
-}

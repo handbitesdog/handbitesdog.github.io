@@ -10,10 +10,9 @@
 <div class="footbag-row-heading flex items-center gap-2">
 <span class="footbag-col-name">{{.name}}</span>
 <span class="footbag-row-summary-meta flex items-center gap-2">
-<span class="footbag-col-fill">{{range .fill}}{{<MaterialIcon category=.category/>}} {{.category}}: {{.weight_g}}g<br>{{end}}</span>
+<span class="footbag-col-fill flex flex-col gap-1">{{range .fill}}<span class="flex items-center gap-1">{{<MaterialIcon category=.category/>}} {{.category}}: {{.weight_g}}g</span>{{end}}</span>
 <span class="footbag-col-weight">{{.total_weight_g}}g</span>
 <span class="footbag-col-level">{{.fill_level_pct}}%</span>
-<span class="footbag-col-date">{{.date}}</span>
 </span>
 </div>
 <div class="footbag-row-detail flex gap-3">
