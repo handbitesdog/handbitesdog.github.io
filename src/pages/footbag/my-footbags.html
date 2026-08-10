@@ -32,13 +32,13 @@
 <div class="footbag-detail-fill flex flex-col gap-1">
 <h3>Fill</h3>
 <div><span class="text-muted">Level:</span> {{.fill_level_pct}}%</div>
+<div><span class="text-muted">Total weight:</span> {{.total_weight_g}}g</div>
 {{range .fill}}
 <div>{{<MaterialIcon category=.category/>}} <span class="text-muted">{{.material}}:</span> {{.weight_g}}g</div>
 {{end}}
 </div>
 <div class="footbag-detail-info flex flex-col gap-1">
 <h3>Details</h3>
-<div><span class="text-muted">Total weight:</span> {{.total_weight_g}}g</div>
 <div><span class="text-muted">Stitches:</span> {{.stitches}}</div>
 <div><span class="text-muted">Thread:</span> {{.thread_type}}</div>
 <div><span class="text-muted">Needle:</span> {{.needle_type}}</div>
