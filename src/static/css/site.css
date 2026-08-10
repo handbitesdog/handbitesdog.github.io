@@ -2,8 +2,41 @@
 
 :root {
     --color-ultrasuede-st-white: #dfdbd4;
+    --color-ultrasuede-st-country-cream: #dcccb0;
+    --color-ultrasuede-st-sand: #ceb492;
+    --color-ultrasuede-st-blonde: #c6a564;
+    --color-ultrasuede-st-chamois: #bd9c72;
+    --color-ultrasuede-st-glaze: #d2ae9d;
+    --color-ultrasuede-st-arctic: #cac7ba;
+    --color-ultrasuede-st-bone: #bfad95;
+    --color-ultrasuede-st-camel: #9a7b5b;
+    --color-ultrasuede-st-coffee-cream: #897058;
+    --color-ultrasuede-st-aztec-leather: #8d5f2f;
+    --color-ultrasuede-st-moccasin: #a56a1f;
+    --color-ultrasuede-st-melange-gray: #87827b;
+    --color-ultrasuede-st-melange-beige: #87755f;
+    --color-ultrasuede-st-woodhue: #624a35;
+    --color-ultrasuede-st-brownstone: #56311c;
+    --color-ultrasuede-st-coffee-bean: #3c261a;
+    --color-ultrasuede-st-clove: #954b22;
+    --color-ultrasuede-st-silver-pearl: #8c8481;
+    --color-ultrasuede-st-montauk: #798d8b;
+    --color-ultrasuede-st-sky-blue: #318a92;
+    --color-ultrasuede-st-jazz-blue: #124275;
+    --color-ultrasuede-st-scoundrel: #b41a2c;
+    --color-ultrasuede-st-tangerine: #c85c17;
+    --color-ultrasuede-st-executive-grey: #595049;
+    --color-ultrasuede-st-topiary: #445039;
     --color-ultrasuede-st-zodiac: #39366f;
+    --color-ultrasuede-st-bordeaux: #461a1f;
+    --color-ultrasuede-st-fushia: #a12655;
     --color-ultrasuede-st-lemon: #e0ae2d;
+    --color-ultrasuede-st-egyptian-green: #0a2620;
+    --color-ultrasuede-st-forrest: #1b1d18;
+    --color-ultrasuede-st-admiral: #1a253e;
+    --color-ultrasuede-st-classic-navy: #17192d;
+    --color-ultrasuede-st-violine: #422339;
+    --color-ultrasuede-st-black-onyx: #161413;
 }
 
 /* Footbag list */
