@@ -1,8 +1,44 @@
 [
     {
+        "id": 4,
+        "name": "Footbag 4",
+        "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 61 }],
+        "total_weight_g": 65,
+        "stitches": 3,
+        "thread_type": "Coats & Clark 100% Nylon Extra Strength Upholstery Thread",
+        "needle_type": "John James Sharps Size 5/10",
+        "fill_level_pct": 40,
+        "image": "/img/footbags/4.jpg",
+        "date": "August 5, 2026"
+    },
+    {
+        "id": 3,
+        "name": "Footbag 3",
+        "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 61.3 }, { "category": "plastic", "material": "plastic pellets", "weight_g": 3 } ],
+        "total_weight_g": 70,
+        "stitches": 3,
+        "thread_type": "Coats & Clark 100% Nylon Extra Strength Upholstery Thread",
+        "needle_type": "John James Sharps Size 5/10",
+        "fill_level_pct": 40,
+        "image": "/img/footbags/3.jpg",
+        "date": "July 26, 2026"
+    },
+    {
+        "id": 2,
+        "name": "Footbag 2",
+        "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 53.4 }, { "category": "plastic", "material": "plastic pellets", "weight_g": 1.5 }, { "category": "rubber", "material": "rubber crumb", "weight_g": 0.5 }],
+        "total_weight_g": 61,
+        "stitches": 3,
+        "thread_type": "Coats & Clark 100% Nylon Extra Strength Upholstery Thread",
+        "needle_type": "John James Sharps Size 5/10",
+        "fill_level_pct": 40,
+        "image": "/img/footbags/2.jpg",
+        "date": "July 15, 2026"
+    },
+    {
         "id": 1,
         "name": "Footbag 1",
-        "fill": [{ "material": "stainless steel (2mm bearing ball)", "weight_g": 64.3 }],
+        "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 64.3 }],
         "total_weight_g": 70,
         "stitches": 3,
         "thread_type": "Coats & Clark 100% Nylon Extra Strength Upholstery Thread",
