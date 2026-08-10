@@ -24,7 +24,7 @@
 <div class="footbag-row-heading flex items-center gap-2">
 <span class="footbag-col-name font-bold">{{.name}}</span>
 <span class="footbag-row-summary-meta flex items-center gap-2">
-<span class="footbag-col-fabric flex flex-col gap-1">{{range .fabric}}{{$fabricName := .fabric_name}}{{range .colors}}<span class="flex items-center gap-1">{{<FabricSwatch fabric_name=$fabricName color=./>}} {{.}}</span>{{end}}{{end}}</span>
+<span class="footbag-col-fabric flex flex-col gap-1">{{range .fabric}}<span>{{.fabric_name}}</span>{{end}}</span>
 <span class="footbag-col-fill flex flex-col gap-1">{{range .fill}}<span class="flex items-center gap-1">{{<MaterialIcon category=.category/>}} {{.category}}: {{.weight_g}}g</span>{{end}}</span>
 <span class="footbag-col-weight">{{.total_weight_g}}g</span>
 <span class="footbag-col-level">{{.fill_level_pct}}%</span>
