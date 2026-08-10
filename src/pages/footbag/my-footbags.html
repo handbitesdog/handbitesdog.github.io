@@ -31,7 +31,8 @@
 </span>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footbag-row-toggle"><path d="m6 9 6 6 6-6"/></svg>
 </div>
-<div class="footbag-row-detail flex gap-3">
+<div class="footbag-row-detail flex flex-col gap-3">
+<div class="footbag-detail-columns flex gap-3">
 <div class="footbag-detail-fill flex flex-col gap-1">
 <h3>Design</h3>
 <div><span class="text-muted">Color pattern:</span> {{.color_pattern}}</div>
@@ -55,6 +56,11 @@
 <div><span class="text-muted">Thread:</span> {{.thread_type}}</div>
 <div><span class="text-muted">Needle:</span> {{.needle_type}}</div>
 <div><span class="text-muted">Date:</span> {{.date}}</div>
+</div>
+</div>
+<div class="footbag-detail-notes flex flex-col gap-1">
+<h3>Notes</h3>
+<p>{{if .notes}}{{.notes}}{{else}}-{{end}}</p>
 </div>
 </div>
 </div>

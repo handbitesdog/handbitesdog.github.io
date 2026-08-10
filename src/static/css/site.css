@@ -111,8 +111,13 @@
 }
 
 .footbag-detail-fill h3,
-.footbag-detail-info h3 {
+.footbag-detail-info h3,
+.footbag-detail-notes h3 {
     margin-bottom: var(--space-1);
+}
+
+.footbag-detail-notes p {
+    white-space: pre-line;
 }
 
 .footbag-col-image {
