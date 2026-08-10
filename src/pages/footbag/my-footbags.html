@@ -36,7 +36,7 @@
 <div><span class="text-muted">Level:</span> {{.fill_level_pct}}%</div>
 <div><span class="text-muted">Total weight:</span> {{.total_weight_g}}g</div>
 {{range .fill}}
-<div>{{<MaterialIcon category=.category/>}} <span class="text-muted">{{.material}}:</span> {{.weight_g}}g</div>
+<div class="flex items-center gap-1">{{<MaterialIcon category=.category/>}} <span><span class="text-muted">{{.material}}:</span> {{.weight_g}}g</span></div>
 {{end}}
 </div>
 <div class="footbag-detail-info flex flex-col gap-1">
