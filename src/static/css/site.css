@@ -37,6 +37,8 @@
     --color-ultrasuede-st-classic-navy: #17192d;
     --color-ultrasuede-st-violine: #422339;
     --color-ultrasuede-st-black-onyx: #161413;
+    /* Discontinued color, not in Toray's current catalog; hex estimated from a user-supplied photo */
+    --color-ultrasuede-st-cardinelle: #a52c2c;
 }
 
 /* Footbag list */
