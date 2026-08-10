@@ -8,6 +8,7 @@
 
 .footbag-row-summary {
     padding: var(--space-2);
+    padding-right: var(--space-3);
     cursor: pointer;
     list-style: none;
     align-items: center;
@@ -116,6 +117,7 @@
     border: var(--border-thin-width) solid transparent;
     border-bottom-color: var(--color-border);
     padding: var(--space-2);
+    padding-right: var(--space-3);
     background-color: var(--color-background);
 }
 
