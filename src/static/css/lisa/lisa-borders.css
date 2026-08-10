@@ -1,0 +1,8 @@
+/* lisa-borders.css */
+
+:root {
+    --border-width: 2px;
+    --border-thin-width: 1px;
+    --border-thick-width: 4px;
+    --border-radius: 4px;
+}

@@ -1,0 +1,41 @@
+{{<Layout title="My Footbags">}}
+<h2>My Footbags</h2>
+<div class="footbag-list flex flex-col gap-2">
+{{range .Data.footbags}}
+<details class="footbag-row">
+<summary class="footbag-row-summary flex items-center gap-3">
+<span class="footbag-col-image"><img src="{{.image}}" alt="{{.name}}"></span>
+<div class="footbag-row-body flex flex-col gap-2">
+<div class="footbag-row-heading flex items-center gap-2">
+<span class="footbag-col-name">{{.name}}</span>
+<span class="footbag-row-summary-meta flex items-center gap-2">
+<span class="footbag-col-fill">{{range .fill}}{{.material}}: {{.weight_g}}g<br>{{end}}</span>
+<span class="footbag-col-weight">{{.total_weight_g}}g</span>
+<span class="footbag-col-level">{{.fill_level_pct}}%</span>
+<span class="footbag-col-date">{{.date}}</span>
+</span>
+</div>
+<div class="footbag-row-detail flex gap-3">
+<div class="footbag-detail-fill flex flex-col gap-1">
+<h3>Fill</h3>
+<div><span class="text-muted">Level:</span> {{.fill_level_pct}}%</div>
+{{range .fill}}
+<div><span class="text-muted">{{.material}}:</span> {{.weight_g}}g</div>
+{{end}}
+</div>
+<div class="footbag-detail-info flex flex-col gap-1">
+<h3>Details</h3>
+<div><span class="text-muted">Total weight:</span> {{.total_weight_g}}g</div>
+<div><span class="text-muted">Stitches:</span> {{.stitches}}</div>
+<div><span class="text-muted">Thread:</span> {{.thread_type}}</div>
+<div><span class="text-muted">Needle:</span> {{.needle_type}}</div>
+<div><span class="text-muted">Date:</span> {{.date}}</div>
+</div>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footbag-row-toggle"><path d="m6 9 6 6 6-6"/></svg>
+</summary>
+</details>
+{{end}}
+</div>
+{{</Layout>}}
