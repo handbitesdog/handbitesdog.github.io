@@ -108,3 +108,21 @@
 .footbag-col-level {
     width: 100px;
 }
+
+.footbag-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: var(--border-thin-width) solid transparent;
+    border-bottom-color: var(--color-border);
+    padding: var(--space-2);
+    background-color: var(--color-background);
+}
+
+.footbag-header-spacer-image {
+    flex: 0 0 96px;
+}
+
+.footbag-header-spacer-toggle {
+    flex: 0 0 16px;
+}

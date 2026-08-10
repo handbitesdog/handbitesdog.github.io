@@ -1,6 +1,19 @@
 {{<Layout title="My Footbags">}}
 <h2 class="mb-2">My Footbags</h2>
 <p class="mb-4">All of the footbags I've made.</p>
+<div class="footbag-table">
+<div class="footbag-header flex items-center gap-3 mb-2">
+<span class="footbag-header-spacer-image" aria-hidden="true"></span>
+<div class="footbag-row-body flex items-center gap-2">
+<span class="footbag-col-name text-xs text-muted uppercase">Name</span>
+<span class="footbag-row-summary-meta flex items-center gap-2">
+<span class="footbag-col-fill text-xs text-muted uppercase">Fill</span>
+<span class="footbag-col-weight text-xs text-muted uppercase">Weight</span>
+<span class="footbag-col-level text-xs text-muted uppercase">Level</span>
+</span>
+</div>
+<span class="footbag-header-spacer-toggle" aria-hidden="true"></span>
+</div>
 <div class="footbag-list flex flex-col gap-2">
 {{range .Data.footbags}}
 <details class="footbag-row">
@@ -37,5 +50,6 @@
 </summary>
 </details>
 {{end}}
+</div>
 </div>
 {{</Layout>}}
