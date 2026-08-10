@@ -138,6 +138,10 @@
     height: auto;
 }
 
+.footbag-row[open] .footbag-col-image img {
+    object-fit: contain;
+}
+
 .footbag-col-name {
     width: 160px;
 }
