@@ -1,8 +1,12 @@
+/* lisa-interaction.css */
+
+/* Links */
 a:hover {
     color: var(--color-accent-hover);
     text-decoration: underline;
 }
 
+/* Navbar */
 .navbar a:hover {
     color: var(--color-foreground);
     text-decoration: none;

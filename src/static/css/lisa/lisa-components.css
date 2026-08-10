@@ -1,8 +1,12 @@
+/* lisa-components.css */
+
+/* Footer */
 .footer {
     padding-top: var(--space-3);
     padding-bottom: var(--space-3);
 }
 
+/* Navbar */
 .navbar {
     padding-top: var(--space-3);
     padding-bottom: var(--space-3);

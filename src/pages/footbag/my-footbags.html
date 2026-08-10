@@ -1,5 +1,6 @@
 {{<Layout title="My Footbags">}}
-<h2>My Footbags</h2>
+<h2 class="mb-2">My Footbags</h2>
+<p class="mb-4">All of the footbags I've made.</p>
 <div class="footbag-list flex flex-col gap-2">
 {{range .Data.footbags}}
 <details class="footbag-row">
@@ -9,7 +10,7 @@
 <div class="footbag-row-heading flex items-center gap-2">
 <span class="footbag-col-name">{{.name}}</span>
 <span class="footbag-row-summary-meta flex items-center gap-2">
-<span class="footbag-col-fill">{{range .fill}}{{.material}}: {{.weight_g}}g<br>{{end}}</span>
+<span class="footbag-col-fill">{{range .fill}}{{<MaterialIcon category=.category/>}} {{.category}}: {{.weight_g}}g<br>{{end}}</span>
 <span class="footbag-col-weight">{{.total_weight_g}}g</span>
 <span class="footbag-col-level">{{.fill_level_pct}}%</span>
 <span class="footbag-col-date">{{.date}}</span>
@@ -20,7 +21,7 @@
 <h3>Fill</h3>
 <div><span class="text-muted">Level:</span> {{.fill_level_pct}}%</div>
 {{range .fill}}
-<div><span class="text-muted">{{.material}}:</span> {{.weight_g}}g</div>
+<div>{{<MaterialIcon category=.category/>}} <span class="text-muted">{{.material}}:</span> {{.weight_g}}g</div>
 {{end}}
 </div>
 <div class="footbag-detail-info flex flex-col gap-1">

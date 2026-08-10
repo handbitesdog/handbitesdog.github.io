@@ -109,3 +109,12 @@
     text-align: right;
     color: var(--color-muted);
 }
+
+.material-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    vertical-align: middle;
+}

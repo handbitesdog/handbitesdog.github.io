@@ -1,4 +1,5 @@
-/* placeholder palette — swap for real brand colors */
+/* lisa-colors.css */
+
 :root {
   --color-background: #f8f9fa;
   --color-foreground: #212529;
@@ -17,6 +18,7 @@ a {
     color: var(--color-accent);
 }
 
+/* Background */
 .bg-background {
   background-color: var(--color-background);
 }
@@ -29,6 +31,7 @@ a {
   background-color: var(--color-accent);
 }
 
+/* Text */
 .text-foreground {
   color: var(--color-foreground);
 }
