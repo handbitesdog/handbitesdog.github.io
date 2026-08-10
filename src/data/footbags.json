@@ -2,6 +2,7 @@
     {
         "id": 4,
         "name": "Footbag 4",
+        "color_pattern": "solid",
         "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 61 }],
         "total_weight_g": 65,
         "stitches": 3,
@@ -14,6 +15,7 @@
     {
         "id": 3,
         "name": "Footbag 3",
+        "color_pattern": "solid",
         "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 61.3 }, { "category": "plastic", "material": "plastic pellets", "weight_g": 3 } ],
         "total_weight_g": 70,
         "stitches": 3,
@@ -26,6 +28,7 @@
     {
         "id": 2,
         "name": "Footbag 2",
+        "color_pattern": "solid",
         "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 53.4 }, { "category": "plastic", "material": "plastic pellets", "weight_g": 1.5 }, { "category": "rubber", "material": "rubber crumb", "weight_g": 0.5 }],
         "total_weight_g": 61,
         "stitches": 3,
@@ -38,6 +41,7 @@
     {
         "id": 1,
         "name": "Footbag 1",
+        "color_pattern": "solid",
         "fill": [{ "category": "steel", "material": "stainless steel", "weight_g": 64.3 }],
         "total_weight_g": 70,
         "stitches": 3,
