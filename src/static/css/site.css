@@ -17,8 +17,12 @@
     display: none;
 }
 
-.footbag-row-summary:hover {
-    background-color: var(--color-border);
+.footbag-row:hover {
+    border-color: var(--color-border-hover);
+}
+
+.footbag-row-summary:hover .footbag-row-toggle {
+    color: var(--color-border-hover);
 }
 
 .footbag-row[open] .footbag-row-summary {
@@ -29,6 +33,7 @@
     width: 16px;
     height: 16px;
     flex-shrink: 0;
+    color: var(--color-border);
 }
 
 .footbag-row[open] .footbag-row-toggle {
