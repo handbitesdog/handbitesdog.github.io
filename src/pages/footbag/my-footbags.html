@@ -1,33 +1,24 @@
 {{<Layout title="My Footbags">}}
 <h2>My Footbags</h2>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Image</th>
-<th>Name</th>
-<th>Fill</th>
-<th>Total Weight</th>
-<th>Stitches</th>
-<th>Thread</th>
-<th>Needle</th>
-<th>Fill Level</th>
-</tr>
-</thead>
-<tbody>
+<div class="footbag-list flex flex-col gap-2">
 {{range .Data.footbags}}
-<tr>
-<td>{{.id}}</td>
-<td><img src="{{.image}}" alt="{{.name}}"></td>
-<td>{{.name}}</td>
-<td>{{range .fill}}{{.material}}: {{.weight_g}}g<br>{{end}}</td>
-<td>{{.total_weight_g}}g</td>
-<td>{{.stitches}}</td>
-<td>{{.thread_type}}</td>
-<td>{{.needle_type}}</td>
-<td>{{.fill_level_pct}}%</td>
-</tr>
+<details class="footbag-row">
+<summary class="footbag-row-summary flex items-center gap-2">
+<span class="footbag-col-image"><img src="{{.image}}" alt="{{.name}}"></span>
+<span class="footbag-col-name">{{.name}}</span>
+<span class="footbag-col-fill">{{range .fill}}{{.material}}: {{.weight_g}}g<br>{{end}}</span>
+<span class="footbag-col-weight">{{.total_weight_g}}g</span>
+<span class="footbag-col-level">{{.fill_level_pct}}%</span>
+<span class="footbag-col-date">{{.date}}</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footbag-row-toggle"><path d="m6 9 6 6 6-6"/></svg>
+</summary>
+<div class="footbag-row-detail flex flex-col gap-1">
+<div><span class="text-muted">ID:</span> {{.id}}</div>
+<div><span class="text-muted">Stitches:</span> {{.stitches}}</div>
+<div><span class="text-muted">Thread:</span> {{.thread_type}}</div>
+<div><span class="text-muted">Needle:</span> {{.needle_type}}</div>
+</div>
+</details>
 {{end}}
-</tbody>
-</table>
+</div>
 {{</Layout>}}
