@@ -1,0 +1,42 @@
+/* placeholder palette — swap for real brand colors */
+:root {
+  --color-background: #f8f9fa;
+  --color-foreground: #212529;
+  --color-muted: #495057;
+  --color-accent: #4263eb;
+  --color-accent-hover: #364fc7;
+  --color-border: #e0e0e0;
+}
+
+body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+a {
+    color: var(--color-accent);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-muted {
+  background-color: var(--color-muted);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-foreground {
+  color: var(--color-foreground);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
