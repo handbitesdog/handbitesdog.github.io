@@ -21,7 +21,7 @@
 <span class="footbag-col-image"><img src="{{.image}}" alt="{{.name}}"></span>
 <div class="footbag-row-body flex flex-col gap-2">
 <div class="footbag-row-heading flex items-center gap-2">
-<span class="footbag-col-name">{{.name}}</span>
+<span class="footbag-col-name font-bold">{{.name}}</span>
 <span class="footbag-row-summary-meta flex items-center gap-2">
 <span class="footbag-col-fill flex flex-col gap-1">{{range .fill}}<span class="flex items-center gap-1">{{<MaterialIcon category=.category/>}} {{.category}}: {{.weight_g}}g</span>{{end}}</span>
 <span class="footbag-col-weight">{{.total_weight_g}}g</span>
