@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Footbag 1",
+        "fill": [{ "material": "stainless steel (2mm bearing ball)", "weight_g": 64.3 }],
+        "total_weight_g": 70,
+        "stitches": 3,
+        "thread_type": "Coats & Clark 100% Nylon Extra Strength Upholstery Thread",
+        "needle_type": "John James Sharps Size 5/10",
+        "fill_level_pct": 35,
+        "image": "/img/footbags/1.jpg"
+    }
+]
