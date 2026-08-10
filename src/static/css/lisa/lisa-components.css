@@ -1,0 +1,13 @@
+.footer {
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+}
+
+.navbar {
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+}
+
+.navbar a {
+    color: var(--color-muted);
+}
