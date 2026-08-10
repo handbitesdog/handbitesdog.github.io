@@ -110,6 +110,10 @@
     vertical-align: middle;
 }
 
+.footbag-detail-fill .image-icon {
+    margin-top: 3px;
+}
+
 .footbag-detail-fill h3,
 .footbag-detail-info h3,
 .footbag-detail-notes h3 {
@@ -140,6 +144,7 @@
 
 .footbag-row[open] .footbag-col-image img {
     object-fit: contain;
+    object-position: top;
 }
 
 .footbag-col-name {
