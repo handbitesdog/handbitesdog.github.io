@@ -7,3 +7,11 @@ a:hover {
     color: var(--color-foreground);
     text-decoration: none;
 }
+
+.navbar-dropdown-trigger:hover {
+    color: var(--color-foreground);
+}
+
+.navbar-dropdown:hover > .navbar-dropdown-menu {
+    display: block;
+}
