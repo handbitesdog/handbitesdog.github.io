@@ -11,8 +11,8 @@
 <span class="footbag-col-weight text-xs text-muted uppercase">Weight</span>
 <span class="footbag-col-level text-xs text-muted uppercase">Level</span>
 </span>
-</div>
 <span class="footbag-header-spacer-toggle" aria-hidden="true"></span>
+</div>
 </div>
 <div class="footbag-list flex flex-col gap-2">
 {{range .Data.footbags}}
@@ -27,6 +27,7 @@
 <span class="footbag-col-weight">{{.total_weight_g}}g</span>
 <span class="footbag-col-level">{{.fill_level_pct}}%</span>
 </span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footbag-row-toggle"><path d="m6 9 6 6 6-6"/></svg>
 </div>
 <div class="footbag-row-detail flex gap-3">
 <div class="footbag-detail-fill flex flex-col gap-1">
@@ -48,7 +49,6 @@
 </div>
 </div>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footbag-row-toggle"><path d="m6 9 6 6 6-6"/></svg>
 </summary>
 </details>
 {{end}}
