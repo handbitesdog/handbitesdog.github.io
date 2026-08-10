@@ -1,0 +1,31 @@
+{{<Layout title="My Footbags">}}
+<h2>My Footbags</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Fill</th>
+<th>Total Weight</th>
+<th>Stitches</th>
+<th>Thread</th>
+<th>Needle</th>
+<th>Fill Level</th>
+</tr>
+</thead>
+<tbody>
+{{range .Data.footbags}}
+<tr>
+<td>{{.id}}</td>
+<td>{{.name}}</td>
+<td>{{range .fill}}{{.material}}: {{.weight_g}}g<br>{{end}}</td>
+<td>{{.total_weight_g}}g</td>
+<td>{{.stitches}}</td>
+<td>{{.thread_type}}</td>
+<td>{{.needle_type}}</td>
+<td>{{.fill_level_pct}}%</td>
+</tr>
+{{end}}
+</tbody>
+</table>
+{{</Layout>}}
