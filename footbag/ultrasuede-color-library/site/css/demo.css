@@ -100,9 +100,26 @@
     width: 100%;
 }
 
+/*
+ * The wash is a pointer's affordance and nothing else. A touch reports a hover
+ * it never takes back, so on a phone every tile a swipe crossed stayed lit and
+ * the grid ended a scroll wearing a trail of highlights no gesture cleared.
+ *
+ * Two rules rather than one guarded rule, because lisa styles every button on
+ * hover and .swatch is a button: guarding the wash alone would only hand the
+ * touch a different stuck fill, the accent one, which is louder than what it
+ * replaced. So the unguarded rule takes lisa's hover off everywhere, and the
+ * wash goes back on only where a pointer can actually lift off the tile.
+ */
 .swatch:hover {
-    background-color: var(--lisa-background-subtle-color);
+    background-color: transparent;
     border: 0;
+}
+
+@media (hover: hover) {
+    .swatch:hover {
+        background-color: var(--lisa-background-subtle-color);
+    }
 }
 
 .swatch:focus-visible {
@@ -214,33 +231,48 @@
     --lisa-popover-width: 720px;
     --lisa-popover-background-color: var(--lisa-background-color);
     /*
-     * The panel itself does not scroll; the column inside it does. lisa scrolls
-     * the whole panel and makes the dismiss button sticky so it survives that,
-     * which keeps the x in place but leaves it standing in the content's way:
-     * the padding above the content is part of what scrolls, so at the end of a
-     * scroll the title has climbed under the button and is being read through
-     * it, and the top of the panel has no space left in it at all.
+     * The panel itself does not scroll; the column inside it does, and it is
+     * given the panel's whole height to do it in.
      *
-     * Handing the scroll to .detail instead puts the panel's padding outside
-     * the scrolling box, where it cannot be scrolled away. The content is
-     * clipped at the padding's inner edge, top and bottom, so a scroll runs out
-     * of room short of the panel's edge rather than against it — and the button
-     * is left in the flow above the box, holding its row against a column that
-     * now scrolls underneath it rather than into it.
+     * The vertical padding belongs to that column rather than to the panel, so
+     * it scrolls along with the content. At rest it reads as it always did —
+     * an inset above the title and below the switch. Under a scroll it travels
+     * with everything else, and the content runs right up to the panel's top
+     * and bottom edges.
+     *
+     * Holding the padding out here instead, on the panel, is what the box used
+     * to do, and it cost more than it looked: the content was clipped at the
+     * padding's inner edge, so a scrolled panel ended in a band of empty white
+     * with the rest of the list cut off behind it and no way to bring it into
+     * view. Better to let the column reach the edge and pass the button.
+     *
+     * Sideways is still the panel's, so a scrollbar rides the panel's own edge
+     * rather than the picture's.
      */
     overflow: hidden;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 /*
- * Not sticky any more — there is nothing left for it to be sticky in, and its
- * row is real. Relative rather than static, though: it is a sibling of the
- * scrolling column and comes before it, so without a position it would take no
- * z-index and the wide panel's content would scroll over the top of it instead
- * of under. lisa's sticky offset is cancelled with it.
+ * Out of the flow altogether, so the scrolling column can take the full height
+ * of the panel and begin at the very top of it. Put back exactly where the
+ * in-flow button used to land: inset from the corner by the padding, then
+ * backed off by the overhang — the half of the 44px tap target that hangs past
+ * the 16px glyph — so the glyph sits on the padding's corner while the target
+ * reaches out into the panel's margin.
+ *
+ * Content scrolls underneath it, which is the price of the column reaching the
+ * edge. It is charged where the panel is emptiest: the top right corner is the
+ * tail of the title's line, and .detail-head's padding-right holds the title
+ * itself clear of the button at every width.
  */
 #swatch-detail button[data-dismiss] {
-    position: relative;
-    top: auto;
+    margin: 0;
+    position: absolute;
+    right: calc(var(--lisa-popover-padding) - var(--lisa-popover-dismiss-overhang));
+    top: calc(var(--lisa-popover-padding) - var(--lisa-popover-dismiss-overhang));
+    z-index: 1;
 }
 
 /*
@@ -255,20 +287,16 @@
     min-height: 0;
     overflow-y: auto;
     /*
-     * Full bleed sideways, and only sideways. The box is widened into the
-     * panel's side padding and that padding is put back inside it, so the
-     * content keeps exactly the inset it had while the scrollbar — which rides
-     * the box's own edge — is moved off the picture and back into the panel's
-     * margin, where the panel's own scrollbar used to sit.
-     *
-     * The vertical padding is left outside on purpose. That is the whole point
-     * of the scroll living here: what is outside the box cannot be scrolled
-     * away, and the top and bottom are where that has to hold.
+     * Full bleed on all four sides, by two different routes. Sideways the box
+     * is widened back into the panel's side padding and that padding is put
+     * back inside it, which keeps the content's inset exactly as it was while
+     * moving the scrollbar off the picture and onto the panel's edge. Top and
+     * bottom need no margin, because the panel has no padding left there to
+     * escape — the whole inset is the padding below, and it scrolls.
      */
     margin-left: calc(-1 * var(--lisa-popover-padding));
     margin-right: calc(-1 * var(--lisa-popover-padding));
-    padding-left: var(--lisa-popover-padding);
-    padding-right: var(--lisa-popover-padding);
+    padding: var(--lisa-popover-padding);
 }
 
 /*
@@ -533,9 +561,16 @@
     transition: background-color var(--lisa-hover-transition-time) ease;
 }
 
+/* Same split as .swatch, and for the same reason — see the note there. */
 .copy:hover {
-    background-color: var(--lisa-background-subtle-color);
+    background-color: transparent;
     border: 0;
+}
+
+@media (hover: hover) {
+    .copy:hover {
+        background-color: var(--lisa-background-subtle-color);
+    }
 }
 
 .copy:focus-visible {
@@ -617,11 +652,11 @@
     }
 
     /*
-     * The head is above the image now, not beside the dismiss button, and the
-     * body is well below it — the button has a row to itself down here. So both
-     * take their full width back.
+     * The body is well below the dismiss button at this width, so it takes its
+     * full width back. The head does not: it is the top of the column now, the
+     * button floats over its top right corner, and the padding is what keeps
+     * the title from running under the glyph.
      */
-    .detail-head,
     .detail-body {
         padding-right: 0;
     }
@@ -652,31 +687,6 @@
     /* the value is on its own line now, so the label has nothing to sit against */
     .detail-facts dt.fact-inks {
         padding-top: 0;
-    }
-
-    /*
-     * The dismiss button gets a row of its own. lisa tucks it over the panel's
-     * top right corner with a bottom margin that takes back the whole row it
-     * would otherwise hold, so the content begins at the very top and flows
-     * under it — which works on a desktop panel with a 40% image column beside
-     * two thirds of empty title line. On a phone the panel is one column and
-     * the picture is the full width of it, so there is nothing for the x to sit
-     * over but the image itself.
-     *
-     * So the row comes back, but only the part of it the glyph actually
-     * occupies: the margin gives back the button's height and the gap after it
-     * and keeps only the overhang, the half of the tap target that hangs past
-     * the glyph and is there to be pressed rather than to be seen. Take the
-     * whole row back instead and the panel's own top padding is still above it,
-     * so the space before the content is counted twice — a band of padding, and
-     * then a band holding a 16px mark in the middle of 44px of nothing.
-     *
-     * What is left is lisa's 32px padding with the glyph sitting directly under
-     * it and the content a gap below that, and a tap target that still reaches
-     * its full 44px by hanging into the padding above and the gap below.
-     */
-    #swatch-detail button[data-dismiss] {
-        margin-bottom: calc(-1 * var(--lisa-popover-dismiss-overhang));
     }
 
 }
