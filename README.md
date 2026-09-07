@@ -9,7 +9,7 @@ build step, no generator, so what is in the repo is what is on the web.
 | -------------------------------- | --------------------------------------------- |
 | `index.html`                     | `/`                                            |
 | `footbag/ultrasuede-color-library/` | `/footbag/ultrasuede-color-library/`        |
-| `LICENSE`                        | `/LICENSE`, which the library's footer links to |
+| `LICENSE`                        | `/LICENSE`, though the footer links to it on GitHub |
 
 `.nojekyll` turns off Jekyll processing. Nothing here needs it, and without the
 file Pages would quietly skip any path beginning with an underscore.
