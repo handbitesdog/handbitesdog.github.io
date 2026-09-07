@@ -789,11 +789,13 @@
         })
         .then(function (data) {
             /*
-             * The missing-image grid is the one that mixes: the colours the
-             * record names but cannot show, and the one Light Jungle colourway
-             * Toray never captured. Sorted together by name, because a reader
+             * The missing-image grid holds what the record names but cannot
+             * show. It is built to mix — a pattern with no capture belongs here
+             * as much as a colour does, sorted in by name, because a reader
              * looking for a name should not have to know which of the two it
-             * is.
+             * is — but the last such pattern has since been found, so today the
+             * list is historical colours alone. Hence the flat "colors" label;
+             * if a pattern ever falls back in, that word needs widening again.
              */
             var shown = data.patterns.filter(function (p) { return !blank(p); });
             var missing = data.historical_colors
@@ -806,7 +808,7 @@
                 ["custom", data.custom_colors, "custom", "colors"],
                 ["missing", missing, function (entry) {
                     return entry.pattern ? "pattern" : "historical";
-                }, "colors and patterns"]
+                }, "colors"]
             ];
 
             /*
