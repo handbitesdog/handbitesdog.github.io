@@ -188,9 +188,10 @@
      * shader, the archived photograph, a flat fill of the sampled hex.
      *
      * The shader comes first because the photographs are the weakest thing in
-     * the dataset — 100px thumbnails, some of them JPEG mush, thirteen of them
-     * watermarked across the middle — while the numbers sampled out of them are
-     * clean. It falls back on its own if WebGL is missing.
+     * the dataset — 100px thumbnails, some of them JPEG mush, eighteen of them
+     * watermarked across the middle, and six no bigger than 57px square —
+     * while the numbers sampled out of them are clean. It falls back on its own
+     * if WebGL is missing.
      *
      * The Light Jungle patterns are printed rather than piece-dyed and carry no
      * nap block, so they keep their photograph: an animal print is not a colour
